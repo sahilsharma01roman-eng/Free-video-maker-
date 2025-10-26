@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Image to Video Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Free Video Maker</h1>
+        <p>Select images from your phone to create a video</p>
+        
+        <div class="upload-area" id="uploadArea">
+            <span>📁 Tap to Select Images</span>
+            <input type="file" id="fileInput" multiple accept="image/*" hidden>
+        </div>
+        
+        <div id="imagePreview"></div>
+        
+        <div class="options">
+            <label>Seconds per image:</label>
+            <select id="duration">
+                <option value="2">2 seconds</option>
+                <option value="3" selected>3 seconds</option>
+                <option value="5">5 seconds</option>
+            </select>
+        </div>
+        
+        <button id="createBtn" disabled>Create Video</button>
+        
