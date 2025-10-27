@@ -1,89 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #f5f5f5;
-}
-
-.container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.upload-area {
+/* Image Upload Styles */
+.upload-container {
     border: 2px dashed #007bff;
-    padding: 40px 20px;
-    text-align: center;
     border-radius: 10px;
+    padding: 30px;
+    text-align: center;
     margin: 20px 0;
     background: #f8f9fa;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.upload-area:hover {
+.upload-container:hover {
+    border-color: #0056b3;
     background: #e9ecef;
 }
 
-button {
-    width: 100%;
-    padding: 15px;
-    background: #007bff;
-    color: white;
-    border: none;
+#imageUpload {
+    margin: 15px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px 0;
-}
-
-button:disabled {
-    background: #6c757d;
-    cursor: not-allowed;
-}
-
-button:hover:not(:disabled) {
-    background: #0056b3;
-}
-
-.hidden {
-    display: none;
+    background: white;
 }
 
 #imagePreview {
-    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-}
-
-.preview-image {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    border: 2px solid #ddd;
+    background: white;
+    min-height: 120px;
 }
 
-.options {
+.image-preview-item {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.image-preview-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#createVideoBtn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
     margin: 20px 0;
 }
 
-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#createVideoBtn:hover:not(:disabled) {
+    background: #218838;
 }
 
-#result {
-    text-align: center;
-    padding: 20px;
-    background: #d4edda;
-    border-radius: 5px;
-    margin: 10px 0;
-  }
+#createVideoBtn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+        }
